@@ -11,7 +11,7 @@
 		<h3> {{ new.title }} </h3>
 		<p> {{ new.pub_date }} </p>
         <h5> {{ new.short_description }} </h5>
-        <span> {{ new.text }} </span>
+        <span> {{ new.text|linebreaks }} </span>
         <span> <i>({{ new.author }})</i></span>
         <hr class="mx-auto my-4">
 	</div>
