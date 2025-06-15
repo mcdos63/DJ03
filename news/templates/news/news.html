@@ -1,0 +1,22 @@
+{% extends 'news/layoute.html' %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content%}
+{#    {% include 'news/nav.html'%}#}
+{#    <h4>Это вторая страница сайта по уроку номер 2</h4>#}
+{% if news %}
+    {% for new in news %}
+	<div>
+		<h3> {{ new.title }} </h3>
+		<p> {{ new.pub_date }} </p>
+        <h5> {{ new.short_description }} </h5>
+        <span> {{ new.text }} </span>
+        <span> <i>({{ new.author }})</i></span>
+        <hr class="mx-auto my-4">
+	</div>
+{% endfor %}
+{% else %}
+    <h2>Новостей нет</h2>
+{% endif %}
+{% endblock %}
